@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             
-                            <h1 class="main-title">CHEVROLET AVEO {{App::getLocale()}}</h1>
+                            <h1 class="main-title">CHEVROLET AVEO</h1>
                             <h1 class="main-title-below">45 AZN / day</h1>
                             <a class="main-button hover-6" href="#">
                                 <span>Rent it now!</span>
