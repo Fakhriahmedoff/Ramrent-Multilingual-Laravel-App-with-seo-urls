@@ -2,6 +2,7 @@
 @include('Front.Widgets.nav')
 @section('content')
 <div class="divider-md" style="height: 78px;"></div>
+<div id="page-content">
 
 <div class="container-fluid classes">
     <div class="row">
