@@ -12,11 +12,13 @@
             <div class="row site-breadcrumbs justify-content-flex-start " >
                 <a href="#"  class="single-breadcrumb">Home</a> / <a href="#" class="single-breadcrumb active">Rental Cars</a>
         </div>
+        <div class="divider-sm"></div>
             <div class="row text-center justify-content-center">
                 <h1 class="title-text">
                     Rent a Car Baku Ram Servis
                 </h1>
             </div>
+          
             <div class="row stats">
                 <div class="holder">
                     <p class="number">
