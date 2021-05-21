@@ -35,9 +35,9 @@
                         </div>
                         <li class="nav-item lang">
                             <ul>
-                                <li><a class="nav-link" href="/az/{{$page->slug_az}}@if(Request::segment(3) == $car->slug)/{{$car->slug}} @endif ">AZ</a></li>
-                                <li><a class="nav-link" href="/en/{{$page->slug_en}}@if(Request::segment(3) == $car->slug)/{{$car->slug}} @endif ">EN</a></li>
-                                <li><a class="nav-link" href="/ru/{{$page->slug_ru}}@if(Request::segment(3) == $car->slug)/{{$car->slug}}  @endif">RU</a></li>
+                                <li><a class="nav-link" href="/az/{{$page->slug_az}}@if(Request::segment(3) and Request::segment(3) == $car->slug)/{{$car->slug}} @endif ">AZ</a></li>
+                                <li><a class="nav-link" href="/en/{{$page->slug_en}}@if(Request::segment(3) and Request::segment(3) == $car->slug)/{{$car->slug}} @endif ">EN</a></li>
+                                <li><a class="nav-link" href="/ru/{{$page->slug_ru}}@if(Request::segment(3) and Request::segment(3) == $car->slug)/{{$car->slug}}  @endif">RU</a></li>
                             </ul>
 
                         </li>
