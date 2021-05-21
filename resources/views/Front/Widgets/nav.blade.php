@@ -5,7 +5,7 @@
             <!--Navbar-->
             <nav id="header" class="navbar navbar-dark indigo darken-2 stroke sticky instantly">
                 <!-- Navbar brand -->
-                <a class="navbar-brand navbar-brand-logo" href="/"><img
+                <a class="navbar-brand navbar-brand-logo" href="/en/main-page"><img
                         src="/front/images/logo.png" class="img-responsive"></a>
 
 
