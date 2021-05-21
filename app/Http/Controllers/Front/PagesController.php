@@ -25,9 +25,10 @@ class PagesController extends Controller
         }
       
     }
-    public function getModelData($parameter){
+    public function getCarData($parameter){
         return Car::where('slug', $parameter)->first();
     }
+    
     public function getCars($parameter){
         if($parameter == null){
             return Car::orderBy('id', 'DESC')->withTranslations()->get();
@@ -49,12 +50,13 @@ class PagesController extends Controller
             $page = Seo::where("slug_ru", $slug)->first();
         }
         
-        $singleCar = $this->getModelData($carslug);
+        $singleCar = $this->getCarData($carslug);
         $cars = $this->getCars($carslug);
+        $carseo = $this->getSingleCarPage($lang);
         $view = $page->viewname;
         $seos = Seo::orderby('id')->where('featured',1)->get();
         $pagescollection = PageResource::collection($seos);
-        $carseo = $this->getSingleCarPage($lang);
+    
         $pagess = $pagescollection->toArray($seos);
         return  view('front.'.$view,)->with(['pagess'=> $pagess, 'page'=>$page, 'car' => $singleCar, 'cars' =>$cars, 'carseo' => $carseo]);
     }
