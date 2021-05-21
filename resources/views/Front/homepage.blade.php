@@ -450,7 +450,7 @@
                             <p class="car-price">
                                 45 AZN / day
                             </p>
-                            <a href="#" class="primary-action-button">
+                            <a href="#" class=" primary-action-button">
                                 Rent a Car
                             </a>
                         </div>

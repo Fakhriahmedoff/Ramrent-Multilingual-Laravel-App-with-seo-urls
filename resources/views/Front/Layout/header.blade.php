@@ -49,7 +49,23 @@
             />
 
         <script src="{{asset('front/assets/show-hide-text.js')}}"></script>
-        <title>{{$page->meta_title}}</title>
+        <title>
+            @if(App::getLocale() == 'az')
+            {{$page->title_az}}
+            @elseif(App::getLocale() == 'ru')
+            {{$page->title_ru}}
+            @else
+            {{$page->title_en}}
+            @endif
+        </title>
+        @if(App::getLocale() == 'az')
+        <meta name="description" content="{{$page->description_az}}">
+        @elseif(App::getLocale() == 'ru')
+        <meta name="description" content="{{$page->description_ru}}">
+        @else
+        <meta name="description" content="{{$page->description_en}}">
+        @endif
+        
     </head>
 @if($page->id == 1)
 @include('Front.Widgets.nav-homepage')
