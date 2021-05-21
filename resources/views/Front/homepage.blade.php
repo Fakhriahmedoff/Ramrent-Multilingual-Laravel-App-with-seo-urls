@@ -1,5 +1,5 @@
 @extends('Front.Layout.master')
-@include('Front.Widgets.nav-homepage')
+
 @section('content')
 
 

@@ -49,5 +49,10 @@
             />
 
         <script src="{{asset('front/assets/show-hide-text.js')}}"></script>
-        <title>Document</title>
+        <title>{{$page->meta_title}}</title>
     </head>
+@if($page->id == 1)
+@include('Front.Widgets.nav-homepage')
+@else
+@include('Front.Widgets.nav')
+@endif

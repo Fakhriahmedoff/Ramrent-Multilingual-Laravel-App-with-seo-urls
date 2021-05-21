@@ -13,7 +13,7 @@ use App\Http\Controllers\Front\PagesController;
 |
 */
 Route::get('/', function () {
-    return redirect(app()->getLocale());
+    return redirect('/en/main-page');
 });
 Route::get('/{locale}/lang', function ($locale) {
     App::setLocale($locale);

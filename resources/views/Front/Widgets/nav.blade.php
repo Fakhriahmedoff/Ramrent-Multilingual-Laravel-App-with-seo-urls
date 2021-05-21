@@ -3,7 +3,7 @@
        
         <header class="home">
             <!--Navbar-->
-            <nav id="header" class="navbar navbar-dark indigo darken-2 stroke">
+            <nav id="header" class="navbar navbar-dark indigo darken-2 stroke sticky instantly">
                 <!-- Navbar brand -->
                 <a class="navbar-brand navbar-brand-logo" href="/"><img
                         src="/front/images/logo.png" class="img-responsive"></a>
@@ -27,7 +27,7 @@
                     <ul class="navbar-nav mr-auto">
                         <div class="lang-logo">
                             <a class="navbar-brand" href="/"><img
-                                    src="images/logo.png" class="img-responsive"
+                                    src="/front/images/logo.png" class="img-responsive"
                                     style="filter:
                                     invert(1) brightness(8);"></a>
                         </div>
