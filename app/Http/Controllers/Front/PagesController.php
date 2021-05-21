@@ -13,7 +13,7 @@ class PagesController extends Controller
        
     }
 
-    public function getPage($slug){
+    public function getPage($slug,$carslug = null){
         $lang = App::getlocale();
         if($lang == "az"){
             $page = Seo::where("slug_az", $slug)->first();
@@ -25,10 +25,12 @@ class PagesController extends Controller
             $page = Seo::where("slug_ru", $slug)->first();
         }
         $view = $page->viewname;
+        
+        
 
         $seos = Seo::orderby('id')->get();
         $pagescollection = PageResource::collection($seos);
         $pagess = $pagescollection->toArray($seos);
-        return  view('front.'.$view,)->with(['pagess'=> $pagess, 'page'=>$page]);
+        return  $carslug;//view('front.'.$view,)->with(['pagess'=> $pagess, 'page'=>$page]);
     }
 }

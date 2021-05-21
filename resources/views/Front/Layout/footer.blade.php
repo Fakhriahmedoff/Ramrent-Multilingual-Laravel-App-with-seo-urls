@@ -149,6 +149,23 @@ var swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
     },
 });
+var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
 </script>
     <script>
 /*ANIMATION INIT*/
