@@ -29,7 +29,7 @@ if($lang == 'az'){
             'where' => ['locale' => '[a-zA-Z]{2}'],
             'middleware' => 'setlocale'
         ], function () {
-            Route::get('/{slug}/{carslug?}',[PagesController::class,'getPage'] );
+            Route::get('/{slug}/{class?}/{carslug?}',[PagesController::class,'getPage'] );
     });
 }
 if($lang == 'en'){
@@ -39,7 +39,7 @@ Route::group(
         'where' => ['locale' => '[a-zA-Z]{2}'],
         'middleware' => 'setlocale'
     ], function () {
-        Route::get('/{slug}/{carslug?}',[PagesController::class,'getPage'] );
+        Route::get('/{slug}/{class?}/{carslug?}',[PagesController::class,'getPage'] );
 });
 }
 if($lang == 'ru'){
@@ -49,7 +49,7 @@ Route::group(
         'where' => ['locale' => '[a-zA-Z]{2}'],
         'middleware' => 'setlocale'
     ], function () {
-        Route::get('/{slug}/{carslug?}',[PagesController::class,'getPage'] );
+        Route::get('/{slug}/{class?}/{carslug?}',[PagesController::class,'getPage'] );
 });
 }
 

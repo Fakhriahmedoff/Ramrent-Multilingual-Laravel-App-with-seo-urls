@@ -75,10 +75,10 @@
         </div>
         <div class="col-lg-6">
             <h1 class="car-name">
-                CHEVROLET AVEO
+                {{$car->model}}
             </h1>
             <h2 class="car-price">
-                45 AZN / day
+                {{$car->price}} AZN / day
             </h2>
             <p class="context">
                 Price for 2-3-day rent
@@ -106,7 +106,7 @@
 <div class="container specs">
     <div class="row">
         <div class="single-spec">
-            <img src="/front/images/calendar.png" alt=""> Year: 2015
+            <img src="/front/images/calendar.png" alt=""> Year: {{$car->year}}
         </div>
         <div class="single-spec">
             <img src="/front/images/car2.png" alt=""> Class: Econom

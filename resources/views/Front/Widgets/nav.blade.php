@@ -44,7 +44,7 @@
                         
                                @foreach ($pagess as $page)
                              <li class="nav-item">
-                                <a class="nav-link" href="{{$page['slug']}}">
+                                <a class="nav-link" href="/{{App::getLocale()}}/{{$page['slug']}}">
                                     {{$page['title']}}  
                                 </a>
                             </li>  
