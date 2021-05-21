@@ -12,6 +12,7 @@ class PagesController extends Controller
     public function homepage($lang){
        
     }
+
     public function getPage($slug){
         $lang = App::getlocale();
         if($lang == "az"){
