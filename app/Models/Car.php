@@ -10,5 +10,5 @@ class Car extends Model
 {
     use HasFactory;
     use Translatable;
-    protected $translatable = ['model', 'class'];
+    protected $translatable = ['model', 'class', 'fuel', 'transmission'];
 }

@@ -8,7 +8,9 @@
                 <a class="navbar-brand navbar-brand-logo" href="/en/main-page"><img
                         src="/front/images/logo.png" class="img-responsive"></a>
 
-
+                    <div class="phones-nav">
+                        <a href="">+994 (70) 700 44 44</a> <a href="">+994 (70) 700 44 44</a>
+                    </div>
                 <!-- Collapse button -->
                 <button class="navbar-toggler third-button homepage" type="button"
                     data-toggle="collapse"

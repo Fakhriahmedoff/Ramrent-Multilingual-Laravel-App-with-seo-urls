@@ -13,7 +13,7 @@
                 class="swiper-container mySwiper2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="/front/images/aveo.png" />
+                        <img src="/storage/{{$car->thumbnail}}" />
                     </div>
                     <div class="swiper-slide">
                         <img src="/front/images/aveo.png" />
@@ -50,13 +50,12 @@
                 <div class="swiper-wrapper" id="gapped">
                     <div class="swiper-slide">
                         <button class="btn single-car-slider-btn"
-                            style="background-image:
-                            url('/front/images/aveo.png');"> </button>
+                            style="background-image: url('/storage/{{$car->thumbnail}}');"> </button>
                     </div>
                     <div class="swiper-slide">
                         <button class="btn single-car-slider-btn"
                             style="background-image:
-                            url('/front/images/aveo.png');"> </button>
+                            url('/storage/cars/May2021/K0OGM9mxnaeU7I27prg9.jpg');"> </button>
                     </div>
                     <div class="swiper-slide">
                         <button class="btn single-car-slider-btn"
@@ -109,20 +108,20 @@
             <img src="/front/images/calendar.png" alt=""> Year: {{$car->year}}
         </div>
         <div class="single-spec">
-            <img src="/front/images/car2.png" alt=""> Class: Econom
+            <img src="/front/images/car2.png" alt=""> Class: {{$car->class}}
         </div>
         <div class="single-spec">
-            <img src="/front/images/gas-station.png" alt=""> Fuel: Fuel
+            <img src="/front/images/gas-station.png" alt=""> Fuel: {{$car->fuel}}
         </div>
         <div class="single-spec">
-            <img src="/front/images/transmission.png" alt=""> Transmission:
-            Avtomat
+            <img src="/front/images/transmission.png" alt=""> Transmission:{{$car->transmission}}
+            
         </div>
         <div class="single-spec">
-            <img src="/front/images/motor.png" alt=""> Engine: 2.2L
+            <img src="/front/images/motor.png" alt=""> Engine: {{$car->engine}} L
         </div>
         <div class="single-spec">
-            <img src="/front/images/dollar-tag.png" alt=""> Price: 45/AZN day
+            <img src="/front/images/dollar-tag.png" alt=""> Price: {{$car->price}}/AZN day
         </div>
     </div>
 </div>

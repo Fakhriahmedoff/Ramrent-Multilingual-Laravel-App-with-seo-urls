@@ -65,7 +65,7 @@
     </div>
     <div class="row title-holder text-center
         justify-content-center ">
-        <h1 class="title-text">
+        <h1 class="title-text" id="content">
             Rent a Car: Econom Class
         </h1>
     </div> 
@@ -76,7 +76,7 @@
     </div>
 </div>
 
-<div class="container products-list" id="content">
+<div class="container products-list" >
     <div class="row" >
         @foreach ($cars as $car)
 
@@ -94,7 +94,8 @@
                 <p class="car-price">
                     {{$car->price}} AZN / day
                 </p>
-                <a href="{{Request::segment(2)}}/{{$car->slug}}" class="btn primary-action-button">
+                
+                <a href="/{{App::getLocale()}}/{{$carseo}}/{{$car->slug}}" class="btn primary-action-button">
                     @lang('translate.rent-button')
                 </a>
             </div>

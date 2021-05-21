@@ -15,6 +15,16 @@ class PagesController extends Controller
      
     }
 
+    public function getSingleCarPage($lang){
+        if($lang == 'az'){
+            return  Seo::where('page_id',999)->first()->slug_az;
+        }elseif($lang == 'ru'){
+            return  Seo::where('page_id',999)->first()->slug_ru;
+        }else{
+            return  Seo::where('page_id',999)->first()->slug_en;
+        }
+      
+    }
     public function getModelData($parameter){
         return Car::where('slug', $parameter)->first();
     }
@@ -44,7 +54,8 @@ class PagesController extends Controller
         $view = $page->viewname;
         $seos = Seo::orderby('id')->where('featured',1)->get();
         $pagescollection = PageResource::collection($seos);
+        $carseo = $this->getSingleCarPage($lang);
         $pagess = $pagescollection->toArray($seos);
-        return  view('front.'.$view,)->with(['pagess'=> $pagess, 'page'=>$page, 'car' => $singleCar, 'cars' =>$cars]);
+        return  view('front.'.$view,)->with(['pagess'=> $pagess, 'page'=>$page, 'car' => $singleCar, 'cars' =>$cars, 'carseo' => $carseo]);
     }
 }
