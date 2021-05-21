@@ -65,158 +65,45 @@
     </div>
     <div class="row title-holder text-center
         justify-content-center ">
-        <h1 class="title-text">
+        <h1 class="title-text" id="content">
             Rent a Car: Econom Class
         </h1>
-    </div>
-
+    </div> 
     <div class="row tags-row">
         <div class="tags">
-            <a href="#" class="tag"> All classes </a>/
-            <a href="#" class="tag active"> Econom </a>/
-            <a href="#" class="tag"> Bussines </a>/
-            <a href="#" class="tag"> Premium </a>/
-            <a href="#" class="tag"> Crossovers&SUVs </a>/
-            <a href="#" class="tag">Buses&minivans</a>
+          @include('Front.Widgets.tags')
         </div>
     </div>
 </div>
 
-<div class="container products-list">
-    <div class="row">
+<div class="container products-list" >
+    <div class="row" >
+        @foreach ($cars as $car)
+
         <div class="product-cardbox">
             <div class="image">
-                <img src="/front/images/aveo.png" alt="">
+                <img width="100%" src="/storage/{{$car->thumbnail}}" alt="">
             </div>
             <div class="content">
                 <p class="car-title">
-                    Chervrolet Aveo
+                    {{$car->model}}
                 </p>
                 <p class="car-year">
-                    2020 year
+                    {{$car->year}} year
                 </p>
                 <p class="car-price">
-                    45 AZN / day
+                    {{$car->price}} AZN / day
                 </p>
-                <a href="#!" class="btn primary-action-button">
-                    Rent a Car
+                
+                <a href="/{{App::getLocale()}}/{{$carseo}}/{{$car->slug}}" class="btn primary-action-button">
+                    @lang('translate.rent-button')
                 </a>
             </div>
         </div>
-        <div class="product-cardbox">
-            <div class="image">
-                <img src="/front/images/aveo.png" alt="">
-            </div>
-            <div class="content">
-                <p class="car-title">
-                    Chervrolet Aveo
-                </p>
-                <p class="car-year">
-                    2020 year
-                </p>
-                <p class="car-price">
-                    45 AZN / day
-                </p>
-                <a href="#!" class="btn primary-action-button">
-                    Rent a Car
-                </a>
-            </div>
-        </div>
-        <div class="product-cardbox">
-            <div class="image">
-                <img src="/front/images/aveo.png" alt="">
-            </div>
-            <div class="content">
-                <p class="car-title">
-                    Chervrolet Aveo
-                </p>
-                <p class="car-year">
-                    2020 year
-                </p>
-                <p class="car-price">
-                    45 AZN / day
-                </p>
-                <a href="#!" class="btn primary-action-button">
-                    Rent a Car
-                </a>
-            </div>
-        </div>
-        <div class="product-cardbox">
-            <div class="image">
-                <img src="/front/images/aveo.png" alt="">
-            </div>
-            <div class="content">
-                <p class="car-title">
-                    Chervrolet Aveo
-                </p>
-                <p class="car-year">
-                    2020 year
-                </p>
-                <p class="car-price">
-                    45 AZN / day
-                </p>
-                <a href="#!" class="btn primary-action-button">
-                    Rent a Car
-                </a>
-            </div>
-        </div>
-        <div class="product-cardbox">
-            <div class="image">
-                <img src="/front/images/aveo.png" alt="">
-            </div>
-            <div class="content">
-                <p class="car-title">
-                    Chervrolet Aveo
-                </p>
-                <p class="car-year">
-                    2020 year
-                </p>
-                <p class="car-price">
-                    45 AZN / day
-                </p>
-                <a href="#!" class="btn primary-action-button">
-                    Rent a Car
-                </a>
-            </div>
-        </div>
-        <div class="product-cardbox">
-            <div class="image">
-                <img src="/front/images/aveo.png" alt="">
-            </div>
-            <div class="content">
-                <p class="car-title">
-                    Chervrolet Aveo
-                </p>
-                <p class="car-year">
-                    2020 year
-                </p>
-                <p class="car-price">
-                    45 AZN / day
-                </p>
-                <a href="#!" class="btn primary-action-button">
-                    Rent a Car
-                </a>
-            </div>
-        </div>
-        <div class="product-cardbox">
-            <div class="image">
-                <img src="/front/images/aveo.png" alt="">
-            </div>
-            <div class="content">
-                <p class="car-title">
-                    Chervrolet Aveo
-                </p>
-                <p class="car-year">
-                    2020 year
-                </p>
-                <p class="car-price">
-                    45 AZN / day
-                </p>
-                <a href="#!" class="btn primary-action-button">
-                    Rent a Car
-                </a>
-            </div>
-        </div>
+
+        @endforeach
+        
+        
         </div>
     </div>
 </div>

@@ -10,7 +10,7 @@
         
         <div class="container satisification">
             <div class="row site-breadcrumbs justify-content-flex-start " >
-                <a href="#"  class="single-breadcrumb">Home</a> / <a href="#" class="single-breadcrumb active">Rental Cars</a>
+              @include('Front.Widgets.breadcrumb')
         </div>
         <div class="divider-sm"></div>
             <div class="row text-center justify-content-center">
