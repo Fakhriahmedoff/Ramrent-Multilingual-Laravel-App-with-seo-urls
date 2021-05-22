@@ -291,63 +291,9 @@
         </div>
     </div>
 
-    <div class="container-fluid classes">
-        <div class="row">
-            <div class="class-holder">
-                <div class="image-wrapper">
-                    <img src="/front/images/econom.jpg" alt="">                      
-                </div>
-                <p class="class-title">
-                    Econom
-                </p>
+  @include('Front.Widgets.classes')
 
-            </div>
-            <div class="class-holder">
 
-                <div class="image-wrapper">
-                    <img src="/front/images/eco.jpg" alt="">
-                    
-                </div>
-                <p class="class-title">
-                    Business
-                </p>
-
-            </div>
-            <div class="class-holder">
-
-                <div class="image-wrapper">
-                    <img src="/front/images/premium.jpg" alt="">
-                    
-                </div>
-                <p class="class-title">
-                    Premium
-                </p>
-
-            </div>
-            <div class="class-holder">
-
-                <div class="image-wrapper">
-                    <img src="/front/images/bus.jpg" alt="">
-                    
-                </div>
-                <p class="class-title">
-                    Buses&minivans
-                </p>
-
-            </div>
-            <div class="class-holder">
-
-                <div class="image-wrapper">
-                    <img src="/front/images/cattouch.jpg" alt="">
-                    
-                </div>
-                <p class="class-title">
-                    Crossovers&SUVs
-                </p>
-
-            </div>
-        </div>
-    </div>
     <div class="car-class-wrapper">
         <div class="container">
             <div class="row title-holder text-center
@@ -364,27 +310,8 @@
     <div class="splide products-slider" id="splide">
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide">
-                    <div class="product-cardbox">
-                        <div class="image">
-                            <img src="/front/images/aveo.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="car-title">
-                                Chervrolet Aveo
-                            </p>
-                            <p class="car-year">
-                                2020 year
-                            </p>
-                            <p class="car-price">
-                                45 AZN / day
-                            </p>
-                            <a href="#" class="primary-action-button">
-                                Rent a Car
-                            </a>
-                        </div>
-                    </div>
-                </li>
+              @include('Front.Widgets.econom-cars')
+                
 
             </ul>
             <br>
@@ -628,42 +555,8 @@
                 </h1>
             </div>
             <div class="row">
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Main office
-                    </p>
-                </div>
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Heydar Aliyev International Airport
-                    </p>
-                </div>
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Gyandzha Airport
-                    </p>
-                </div>
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Gabala <br> International Airport
-                    </p>
-                </div>
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Quba city
-                    </p>
-                </div>
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Quba city
-                    </p>
-                </div>
+               @include('Front.Widgets.locations')
+                
             </div>
 
         </div>

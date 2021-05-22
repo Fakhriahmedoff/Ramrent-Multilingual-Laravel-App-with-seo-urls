@@ -67,8 +67,8 @@
         @endif
         
     </head>
-@if($page->id == 1)
-@include('Front.Widgets.nav-homepage')
-@else
-@include('Front.Widgets.nav')
-@endif
+    @if($page->id == 1)
+    @include('Front.Widgets.nav-homepage')
+    @else
+    @include('Front.Widgets.nav')
+    @endif
