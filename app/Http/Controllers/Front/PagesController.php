@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Resources\PageResource;
 use App\Seo;
 use App\Models\Car;
+use App\Location;
+use App\Models\Brand;
 use App;
 class PagesController extends Controller
 {
@@ -23,7 +25,6 @@ class PagesController extends Controller
         }else{
             return  Seo::where('page_id',999)->first()->slug_en;
         }
-      
     }
     public function getCarData($parameter){
         return Car::where('slug', $parameter)->first();
@@ -35,9 +36,14 @@ class PagesController extends Controller
         }else{
             return Car::where('class',$parameter)->orderBy('id', 'DESC')->withTranslations()->get();
         }
-       
+    }
+    public function getLocations(){
+        return Location::orderBy('id', 'ASC')->withTranslations()->get();
     }
 
+    public function getClassOne(){
+        return Car::where('class', 'econom')->withTranslations()->get();
+    }
     public function getPage($slug,$carslug = null){
         $lang = App::getlocale();
         if($lang == "az"){
@@ -53,11 +59,12 @@ class PagesController extends Controller
         $singleCar = $this->getCarData($carslug);
         $cars = $this->getCars($carslug);
         $carseo = $this->getSingleCarPage($lang);
+        $locations = $this->getLocations();
+        $econom = $this->getClassOne();
         $view = $page->viewname;
         $seos = Seo::orderby('id')->where('featured',1)->get();
         $pagescollection = PageResource::collection($seos);
-    
         $pagess = $pagescollection->toArray($seos);
-        return  view('front.'.$view,)->with(['pagess'=> $pagess, 'page'=>$page, 'car' => $singleCar, 'cars' =>$cars, 'carseo' => $carseo]);
+        return   view('front.'.$view,)->with(['pagess'=> $pagess, 'page'=>$page, 'car' => $singleCar, 'cars' =>$cars, 'carseo' => $carseo, 'locations'=>$locations, 'econom'=>$econom]);
     }
 }

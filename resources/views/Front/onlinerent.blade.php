@@ -18,15 +18,22 @@
     <div class="container rent-form">
         <div class="form-wrapper">
             <form action="" class="rent-form-online">
-                <input placeholder="Car brand" type="text" class="width-md rent-input">
-                <input placeholder="Car brand" type="text" class="width-md rent-input">
-                <input placeholder="Car brand" type="text" class="width-lg rent-input">
+                
+                <select placeholder="Car brand" type="text" class="width-md rent-input">
+                    <option value="1">option1</option>
+                </select>
+                <select placeholder="Car brand" type="text" class="width-md rent-input">
+                    <option value="1">option1</option>
+                </select>
+                <select placeholder="Car brand" type="text" class="width-lg rent-input">
+                    <option value="1">option1</option>
+                </select>
                 <input placeholder="Car brand" type="datetime" class="datetime rent-input">
                 <input placeholder="Car brand" type="datetime" class="datetime rent-input">
-                <input placeholder="Car brand" type="text" class="width-sm rent-input">
-                <input placeholder="Car brand" type="text" class="width-sm rent-input">
-                <input placeholder="Car brand" type="text" class="width-sm rent-input">
-                <textarea  placeholder="Car brand" name="" id="" class="width-lg rent-textarea" cols="30" rows="10"></textarea>
+                <input placeholder="Name, Surname*" type="text" class="width-sm rent-input">
+                <input placeholder="Phone*" type="text" class="width-sm rent-input">
+                <input placeholder="Email" type="text" class="width-sm rent-input">
+                <textarea  placeholder="Any other suggestions" name="" id="" class="width-lg rent-textarea" cols="30" rows="10"></textarea>
                </form>
         </div>
        

@@ -85,42 +85,7 @@
                 </h1>
             </div>
             <div class="row">
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Main office
-                    </p>
-                </div>
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Heydar Aliyev International Airport
-                    </p>
-                </div>
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Gyandzha Airport
-                    </p>
-                </div>
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Gabala <br> International Airport
-                    </p>
-                </div>
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Quba city
-                    </p>
-                </div>
-                <div class="location-card">
-                    <img src="/front/images/locationicon.png" alt="">
-                    <p class="text">
-                        Quba city
-                    </p>
-                </div>
+              @include('Front.Widgets.locations')
             </div>
 
         </div>

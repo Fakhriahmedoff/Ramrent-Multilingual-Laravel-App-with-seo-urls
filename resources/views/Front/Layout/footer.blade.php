@@ -144,11 +144,22 @@ $(document).ready(function () {
 });
 </script>
     <script>
-var swiper = new Swiper('.swiper-container', {
-    pagination: {
-        el: '.swiper-pagination',
-    },
-});
+
+ var swiper = new Swiper("#home-swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
 var swiper = new Swiper(".mySwiper", {
       spaceBetween: 10,
       slidesPerView: 4,
