@@ -399,7 +399,7 @@
             <div class="row title-holder text-center
                 justify-content-center">
                 <h1 class="title-text">
-                    Rent a Car: Econom Class
+                    Rent a Car: Premium Class
                 </h1>
             </div>
 
@@ -409,28 +409,7 @@
     <div class="splide products-slider" id="splide3">
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide">
-                    <div class="product-cardbox">
-                        <div class="image">
-                            <img src="/front/images/aveo.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="car-title">
-                                Chervrolet Aveo
-                            </p>
-                            <p class="car-year">
-                                2020 year
-                            </p>
-                            <p class="car-price">
-                                45 AZN / day
-                            </p>
-                            <a href="#" class="primary-action-button">
-                                Rent a Car
-                            </a>
-                        </div>
-                    </div>
-                </li>
-
+                @include('Front.Widgets.premium-cars')
             </ul>
             <br>
             <a href="#" class="more-action-button">

@@ -42,7 +42,19 @@ class PagesController extends Controller
     }
 
     public function getClassOne(){
-        return Car::where('class', 'econom')->withTranslations()->get();
+        return  Car::where('class', 'econom')->withTranslations()->get();
+    }
+    public function getClassTwo(){
+        return  Car::where('class', 'premium')->withTranslations()->get();
+    }
+    public function getClassThree(){
+        return  Car::where('class', 'econom')->withTranslations()->get();
+    }
+    public function getClassFour(){
+        return  Car::where('class', 'econom')->withTranslations()->get();
+    }
+    public function getClassFive(){
+        return  Car::where('class', 'econom')->withTranslations()->get();
     }
     public function getPage($slug,$carslug = null){
         $lang = App::getlocale();
@@ -61,10 +73,20 @@ class PagesController extends Controller
         $carseo = $this->getSingleCarPage($lang);
         $locations = $this->getLocations();
         $econom = $this->getClassOne();
+        $premium = $this->getClassTwo();
         $view = $page->viewname;
         $seos = Seo::orderby('id')->where('featured',1)->get();
         $pagescollection = PageResource::collection($seos);
         $pagess = $pagescollection->toArray($seos);
-        return   view('front.'.$view,)->with(['pagess'=> $pagess, 'page'=>$page, 'car' => $singleCar, 'cars' =>$cars, 'carseo' => $carseo, 'locations'=>$locations, 'econom'=>$econom]);
+        return   view('front.'.$view,)->with([
+            'pagess'=> $pagess, 
+            'page'=>$page, 
+            'car' => $singleCar, 
+            'cars' =>$cars, 
+            'carseo' => $carseo, 
+            'locations'=>$locations, 
+            'econom'=>$econom,
+            'premium' =>$premium
+            ]);
     }
 }
