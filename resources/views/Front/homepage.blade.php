@@ -4,7 +4,7 @@
 
 
 <div id="page-content">
-    <div class="swiper-container homepage">
+    <div class="swiper-container homepage home-swiper" id="home-swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide" style="background-image:
                 url('/front/images/first.jpg'); background-size: cover;">
