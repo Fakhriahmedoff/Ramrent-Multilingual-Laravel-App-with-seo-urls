@@ -1,5 +1,4 @@
 @extends('Front.Layout.master')
-@include('Front.Widgets.nav')
 @section('content')
 <div class="divider-md" style="height: 78px;"></div>
 <div id="page-content">
