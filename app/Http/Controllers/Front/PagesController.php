@@ -78,15 +78,15 @@ class PagesController extends Controller
         $seos = Seo::orderby('id')->where('featured',1)->get();
         $pagescollection = PageResource::collection($seos);
         $pagess = $pagescollection->toArray($seos);
-        return   view('front.'.$view,)->with([
-            'pagess'=> $pagess, 
-            'page'=>$page, 
-            'car' => $singleCar, 
-            'cars' =>$cars, 
-            'carseo' => $carseo, 
-            'locations'=>$locations, 
-            'econom'=>$econom,
-            'premium' =>$premium
+        return  view('Front.'.$view,)->with([
+                'pagess'=> $pagess, 
+                'page'=>$page, 
+                'car' => $singleCar, 
+                'cars' =>$cars, 
+                'carseo' => $carseo, 
+                'locations'=>$locations, 
+                'econom'=>$econom,
+                'premium' =>$premium
             ]);
     }
 }
