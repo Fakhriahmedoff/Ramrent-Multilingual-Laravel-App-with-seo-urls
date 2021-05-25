@@ -263,30 +263,46 @@
                 </h1>
             </div>
             <div class="row stats">
-                <div class="holder">
-                    <p class="number">
-                        18+
-                    </p>
-                    <p class="text">
-                        years
-                    </p>
-                </div>
-                <div class="holder">
-                    <p class="number">
-                        18+
-                    </p>
-                    <p class="text">
-                        customer satisfaction
+                <div class="tire"></div>
+                <div class="col-lg-6">
+                    <img src="/front/images/mercedes.png" data-aos="fade-right" alt="">
+                    <p class="stat-text" data-aos="fade-up">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     </p>
                 </div>
-                <div class="holder">
-                    <p class="number">
-                        18+
-                    </p>
-                    <p class="text">
-                        more cars
-                    </p>
+                <div class="col-lg-6">
+                    <div class="holder">
+                        <div class="content" data-aos="fade-left">
+                        <p class="number">
+                            18+
+                        </p>
+                        <p class="text">
+                            years of experience
+                        </p>
+                    </div>
+                    </div>
+                    <div class="holder">
+                        <div class="content" data-aos="fade-left">
+                        <p class="number">
+                            90+
+                        </p>
+                        <p class="text">
+                            more cars
+                        </p>
+                    </div>
+                    </div>
+                    <div class="holder">
+                        <div class="content" data-aos="fade-left">
+                        <p class="number">
+                            98%
+                        </p>
+                        <p class="text">
+                            customer satisfaction
+                        </p>
+                    </div>
+                    </div>
                 </div>
+               
             </div>
         </div>
     </div>
@@ -399,7 +415,7 @@
             <div class="row title-holder text-center
                 justify-content-center">
                 <h1 class="title-text">
-                    Rent a Car: Econom Class
+                    Rent a Car: Premium Class
                 </h1>
             </div>
 
@@ -409,28 +425,7 @@
     <div class="splide products-slider" id="splide3">
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide">
-                    <div class="product-cardbox">
-                        <div class="image">
-                            <img src="/front/images/aveo.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="car-title">
-                                Chervrolet Aveo
-                            </p>
-                            <p class="car-year">
-                                2020 year
-                            </p>
-                            <p class="car-price">
-                                45 AZN / day
-                            </p>
-                            <a href="#" class="primary-action-button">
-                                Rent a Car
-                            </a>
-                        </div>
-                    </div>
-                </li>
-
+                @include('Front.Widgets.premium-cars')
             </ul>
             <br>
             <a href="#" class="more-action-button">
@@ -516,6 +511,32 @@
         </div>
     </div>
     <div class="divider-lg"></div>
+    <div class="cta-wrapper">
+        <div class="container call-to-action">
+            <div class="row">
+                <div class="col-md-6 text-right">
+                  <img data-aos="fade-right"  src="/front/images/left_mercedes.png" width="89%" alt="">
+                  <p class="text1"  data-aos="fade-up">Lorem ipsum dolor sit amet</p>
+                  <p class="text1"  data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <div class="col-md-6">
+                  <h1 class="title2"  data-aos="fade-left">Lorem ipsum dolor sit amet</h1>
+                  <p class="subTitle2"  data-aos="fade-left">Lorem ipsum dolor sit  amet consectetur adipisicing elit amet consectetur adipisicing elit.</p>
+                  <div class="divider-sm"></div>
+                  <div class="content" data-aos="fade-left">
+                        <input type="text" placeholder="Adınız" class="cta-input">
+                        <input type="text" placeholder="Email Adresiniz" class="cta-input">
+                    </div>
+                    <div class="divider-sm"></div>
+                    <a href="#!" class="btn primary-action-button" data-aos="fade-up"> Müraciət Et! </a>
+                </div>
+            </div>
+          
+        </div>
+        <div class="divider-sm"></div>
+        <div class="divider-sm"></div>
+    </div>
+
     <div class="car-class-wrapper feedback">
         <div class="container">
             <div class="row title-holder text-center
@@ -545,6 +566,7 @@
         </div>
     </div>
     <div class="divider-md"></div>
+    
 
     <div class="car-class-wrapper locations">
         <div class="container">
@@ -555,6 +577,8 @@
                 </h1>
             </div>
             <div class="row">
+                <div class="tire-for-one" ></div>
+                <div class="tire-for-two" ></div>
                @include('Front.Widgets.locations')
                 
             </div>

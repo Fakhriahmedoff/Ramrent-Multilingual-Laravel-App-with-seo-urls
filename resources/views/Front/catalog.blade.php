@@ -1,5 +1,4 @@
 @extends('Front.Layout.master')
-@include('Front.Widgets.nav')
 @section('content')
 <div class="divider-md" style="height: 78px;"></div>
 <div id="page-content">
@@ -28,8 +27,8 @@
         @foreach ($cars as $car)
 
         <div class="product-cardbox">
-            <div class="image">
-                <img width="100%" src="/storage/{{$car->thumbnail}}" alt="">
+            <div class="image" style="background-image: url('{{Voyager::image($car->thumbnail)}}')">
+         
             </div>
             <div class="content">
                 <p class="car-title">

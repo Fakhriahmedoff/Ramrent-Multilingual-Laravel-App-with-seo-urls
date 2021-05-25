@@ -1,9 +1,17 @@
 @extends('Front.Layout.master')
 @section('content')
 <div id="page-content" class="single-car-page">
-<div class="divider-md" style="height: 78px;"></div>
-<div class="divider-lg"></div>
+<div class="divider-md" style="height: 120px;"></div>
+<div class="container satisification">
+    <div class="row site-breadcrumbs justify-content-flex-start " >
+        @include('Front.Widgets.breadcrumb')
+</div>
+</div>
+<div class="divider-sm"></div>
 @php $images =json_decode($car->images) @endphp
+
+ 
+
 <div class="container single-car">
     <div class="row">
         <div class="col-lg-6">
@@ -153,8 +161,29 @@
 <div class="splide products-slider" id="splide">
     <div class="splide__track">
         <ul class="splide__list">
-            @include('Front.Widgets.econom-cars')
-
+                    @foreach ($econom as $eco)
+        <li class="splide__slide">
+            <div class="product-cardbox">
+                <div class="image" style="background-image: url('{{Voyager::image($eco->thumbnail)}}')">
+                
+                </div>
+                <div class="content">
+                    <p class="car-title">
+                    {{$eco->category->name}} {{$eco->model}}
+                    </p>
+                    <p class="car-year">
+                        {{$eco->year}} year
+                    </p>
+                    <p class="car-price">
+                        {{$eco->price}} AZN / day
+                    </p>
+                    <a href="/{{App::getLocale()}}/{{$carseo}}/{{$eco->slug}}" class="btn primary-action-button">
+                        @lang('translate.rent-button')
+                    </a>
+                </div>
+            </div>
+        </li>
+        @endforeach
         </ul>
         <br>
         <a href="#" class="more-action-button">

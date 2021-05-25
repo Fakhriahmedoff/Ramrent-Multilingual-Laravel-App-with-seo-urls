@@ -83,6 +83,8 @@
     <script
         type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
         <script>
               function progress(percent, $element) {
             var progressBarWidth = percent * $element.width() / 100;
