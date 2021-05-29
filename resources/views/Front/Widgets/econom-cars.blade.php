@@ -1,6 +1,6 @@
 @foreach ($econom as $eco)
-<li class="splide__slide">
-    <div class="product-cardbox" >
+<li class="splide__slide" >
+    <div class="product-cardbox" data-aos="fade-right">
         <div class="image" style="background-image: url('{{Voyager::image($eco->thumbnail)}}')">
          
         </div>

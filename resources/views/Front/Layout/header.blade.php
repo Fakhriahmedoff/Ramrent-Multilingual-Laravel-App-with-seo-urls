@@ -48,7 +48,10 @@
             rel="stylesheet"
             />
             <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+            <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
 
         <script src="{{asset('front/assets/show-hide-text.js')}}"></script>
         <title>
